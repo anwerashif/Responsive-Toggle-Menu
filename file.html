@@ -20,11 +20,11 @@
     height: 50px;
     position: relative;
 }
-#menu-toggle {
+.top-nav #menu-toggle {
     display: none;
     z-index: 10;
 }
-.menu-button-container {
+.top-nav .menu-button-container {
     display: flex;
     height: 100%;
     width: 30px;
@@ -33,7 +33,9 @@
     justify-content: center;
     align-items: center;
 }
-.menu-button, .menu-button::before, .menu-button::after {
+.top-nav .menu-button, 
+.top-nav .menu-button::before, 
+.top-nav .menu-button::after {
     display: block;
     background-color: #000;
     position: absolute;
@@ -42,15 +44,15 @@
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     border-radius: 2px;
 }
-.menu-button::before {
+.top-nav .menu-button::before {
     content: '';
     margin-top: -8px;
 }
-.menu-button::after {
+.top-nav .menu-button::after {
     content: '';
     margin-top: 8px;
 }
-.menu {
+.top-nav .menu {
     position: absolute;
     top: 0;
     margin-top: 50px;
@@ -63,7 +65,7 @@
     padding: 0;
     z-index: 1;
 }
-#menu-toggle:checked ~ .menu li {
+.top-nav #menu-toggle:checked ~ .menu li {
     border: 1px solid #333;
     height: 3em;
     padding: 0.5em;
@@ -76,7 +78,7 @@
     overflow: hidden;
     position: relative;
 }
-#menu-toggle ~ .menu li {
+.top-nav #menu-toggle ~ .menu li {
     margin: 0;
     height: 0;
     padding: 0;
@@ -90,20 +92,20 @@
     overflow: hidden;
     position: relative;
 }
-.menu>li a {
+.top-nav .menu>li a {
     color: #fff;
     font-size: 19px;
     font-family: Oxygen,sans-serif;
 }
-#menu-toggle:checked + .menu-button-container .menu-button::before {
+.top-nav #menu-toggle:checked + .menu-button-container .menu-button::before {
     margin-top: 0px;
     transform: rotate(405deg);
 }
-#menu-toggle:checked + .menu-button-container .menu-button::after {
+.top-nav #menu-toggle:checked + .menu-button-container .menu-button::after {
     margin-top: 0px;
     transform: rotate(-405deg);
 }
-#menu-toggle:checked + .menu-button-container .menu-button {
+.top-nav #menu-toggle:checked + .menu-button-container .menu-button {
     background: rgba(255, 255, 255, 0);
 }
-  </style>
+</style>
